@@ -6,6 +6,9 @@ import java.io.IOException;
 public class AutomatePwn  {
 	
 	public void connect() throws InterruptedException, AWTException {
+		
+		//Java runtime is used to interact with java runtime environment 
+		//getRuntime return the instance of the class
 		Runtime r = Runtime.getRuntime();
 		Process p;
 		
@@ -22,7 +25,7 @@ public class AutomatePwn  {
 		{
 			
 			p = r.exec(s);                  //open the putty session
-			Thread.sleep(3000);
+			Thread.sleep(3000);		// executes a given command in a sepearate process
 
 		} catch (Exception e)
 		{
@@ -88,7 +91,7 @@ public class AutomatePwn  {
 	
 	public static void main(String[] args) throws IOException, AWTException, InterruptedException
 	{
-	    AutomateGetShell auto = new AutomateGetShell();
+	    AutomatePwn auto = new AutomatePwn();
 	    //Calling the methods
 	    auto.connect();
 	}
